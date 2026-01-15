@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools==65.0.0", "wheel"] # similar to cc on makefile
+build-backend = "setuptools.build_meta" # similar to flags on makefile
+
+[project]
+name = "ft_package"
+version = "0.0.1"
+authors = [
+  { name="isilva-t", email="isilva-t@student.42porto.com" },
+]
+description = "A isilva-t ex09 package"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+
+[project.urls]
+Homepage = "https://github.com/isilva-t"
+
+[tool.setuptools.packages.find]
+include = ["ft_package*"]

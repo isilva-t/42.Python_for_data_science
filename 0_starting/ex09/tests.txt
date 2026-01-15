@@ -1,0 +1,59 @@
+
+# to uninstall
+pip uninstall ft_package
+rm -rf dist/ build/ *.egg-info ft_package.egg-info
+
+# to install
+pip install build
+python -m build
+
+pip install ./dist/ft_package-0.0.1.tar.gz
+or
+pip install ./dist/ft_package-0.0.1-py3-none-any.whl
+
+pip show -v ft_package
+
+
+================================================================================
+                        venv commands
+================================================================================
+
+# venv
+deactivate
+source venv/bin/activate
+
+# another way
+python3 -m venv venv_example
+source venv_example/bin/activate
+(venv_example) ➜  ex09 git:(main) ✗
+
+================================================================================
+                        DIFERENCES BETWEEN USE "tar.gz" or "whl"
+================================================================================
+
+
+pip install ft_package-0.0.1.tar.gz
+# 1. Extract source
+# 2. Run setup.py/pyproject.toml  
+# 3. Build metadata
+# 4. Install
+# → Slower
+
+pip install ft_package-0.0.1-py3-none-any.whl
+# 1. Extract and copy files
+# → Much faster!
+
+
+================================================================================
+                        VENV EXPLAIN
+================================================================================
+
+FEATURE                          DOCKER              venv
+--------------------------------------------------------------------------------
+Operating System                 YES                 NO (uses host OS)
+Python version                   YES                 Partial (uses system Python)
+Python packages                  YES                 YES
+System libraries (gcc, nginx)    YES                 NO
+Filesystem                       YES                 NO
+Network                          YES                 NO
+================================================================================

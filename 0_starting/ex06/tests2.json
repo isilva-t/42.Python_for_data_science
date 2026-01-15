@@ -1,0 +1,62 @@
+[
+  {
+    "description": "Example 1 from subject - filter length > 4",
+    "args": ["Hello the World", "4"],
+    "expected": "['Hello', 'World']"
+  },
+  {
+    "description": "Example 2 from subject - no matches",
+    "args": ["Hello the World", "99"],
+    "expected": "[]"
+  },
+  {
+    "description": "Example 3 from subject - wrong argument order",
+    "args": ["3", "Hello the World"],
+    "expected": "AssertionError: the arguments are bad"
+  },
+  {
+    "description": "Example 4 from subject - no arguments",
+    "args": [],
+    "expected": "AssertionError: the arguments are bad"
+  },
+  {
+    "description": "Filter length > 2",
+    "args": ["hi hello world", "2"],
+    "expected": "['hello', 'world']"
+  },
+  {
+    "description": "Filter length > 0 - all words",
+    "args": ["one two three", "0"],
+    "expected": "['one', 'two', 'three']"
+  },
+  {
+    "description": "Single word match",
+    "args": ["test", "3"],
+    "expected": "['test']"
+  },
+  {
+    "description": "Single word no match",
+    "args": ["hi", "5"],
+    "expected": "[]"
+  },
+  {
+    "description": "Empty string",
+    "args": ["", "0"],
+    "expected": "[]"
+  },
+  {
+    "description": "Multiple arguments error",
+    "args": ["hello", "2", "extra"],
+    "expected": "AssertionError: the arguments are bad"
+  },
+  {
+    "description": "Non-integer second argument",
+    "args": ["hello world", "not_a_number"],
+    "expected": "AssertionError: the arguments are bad"
+  },
+  {
+    "description": "Negative number",
+    "args": ["hello world", "-1"],
+    "expected": "['hello', 'world']"
+  }
+]

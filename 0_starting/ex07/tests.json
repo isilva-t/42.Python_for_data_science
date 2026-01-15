@@ -1,0 +1,92 @@
+[
+  {
+    "description": "Example from subject - sos",
+    "args": ["sos"],
+    "expected": "... --- ..."
+  },
+  {
+    "description": "Example from subject - invalid character $",
+    "args": ["h$llo"],
+    "expected": "AssertionError: the arguments are bad"
+  },
+  {
+    "description": "Hello World with space",
+    "args": ["Hello World"],
+    "expected": ".... . .-.. .-.. --- / .-- --- .-. .-.. -.."
+  },
+  {
+    "description": "All uppercase - SOS",
+    "args": ["SOS"],
+    "expected": "... --- ..."
+  },
+  {
+    "description": "Mixed case - HeLLo",
+    "args": ["HeLLo"],
+    "expected": ".... . .-.. .-.. ---"
+  },
+  {
+    "description": "Single letter - A",
+    "args": ["A"],
+    "expected": ".-"
+  },
+  {
+    "description": "Numbers - 123",
+    "args": ["123"],
+    "expected": ".---- ..--- ...--"
+  },
+  {
+    "description": "Alphanumeric - abc123",
+    "args": ["abc123"],
+    "expected": ".- -... -.-. .---- ..--- ...--"
+  },
+  {
+    "description": "Multiple spaces",
+    "args": ["hello  world"],
+    "expected": ".... . .-.. .-.. --- / / .-- --- .-. .-.. -.."
+  },
+  {
+    "description": "Only space",
+    "args": [" "],
+    "expected": "/"
+  },
+  {
+    "description": "Empty string",
+    "args": [""],
+    "expected": ""
+  },
+  {
+    "description": "No arguments",
+    "args": [],
+    "expected": "AssertionError: the arguments are bad"
+  },
+  {
+    "description": "Multiple arguments",
+    "args": ["hello", "world"],
+    "expected": "AssertionError: the arguments are bad"
+  },
+  {
+    "description": "Invalid character - !",
+    "args": ["hello!"],
+    "expected": "AssertionError: the arguments are bad"
+  },
+  {
+    "description": "Invalid character - @",
+    "args": ["test@email"],
+    "expected": "AssertionError: the arguments are bad"
+  },
+  {
+    "description": "Invalid character - punctuation",
+    "args": ["hello."],
+    "expected": "AssertionError: the arguments are bad"
+  },
+  {
+    "description": "All digits - 42",
+    "args": ["42"],
+    "expected": "....- ..---"
+  },
+  {
+    "description": "Full alphabet - abc",
+    "args": ["abc"],
+    "expected": ".- -... -.-."
+  }
+]
