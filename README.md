@@ -1,5 +1,7 @@
 # 42 - Python for Data Science
 
+Status: 🚧 In Development
+
 Initial modules covering data science fundamentals through hands-on exercises.
 
 ## Modules
