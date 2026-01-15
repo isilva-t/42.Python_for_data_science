@@ -4,6 +4,8 @@ Status: 🚧 In Development
 
 Initial modules covering data science fundamentals through hands-on exercises.
 
+![python](img.jpg)
+
 ## Modules
 
 **Module 0: Starting**  
